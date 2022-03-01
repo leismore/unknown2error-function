@@ -2,9 +2,11 @@
   "name": "@leismore/unknown2error",
   "version": "1.0.0",
   "description": "The function converts anything into an object of Error (or subclasses) class. If `error` is an object of Error (or subclasses) class, it returns the original `error` object. With any other type, it will convert it into a string first and then an Error object will be created and returned by using the string as the message parameter.",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./test/test.ts",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -15,10 +17,18 @@
     "Error",
     "Unknown"
   ],
-  "author": "Kyle Chine",
+  "author": {
+    "name": "Kyle Chine",
+    "email": "kyle.chine@leismore.co",
+    "url": "https://kyle-chine.leismore.co"
+  },
   "license": "AGPL-3.0-only",
   "bugs": {
     "url": "https://github.com/leismore/unknown2error-function/issues"
   },
-  "homepage": "https://github.com/leismore/unknown2error-function#readme"
+  "homepage": "https://github.com/leismore/unknown2error-function#readme",
+  "devDependencies": {
+    "@types/node": "~16.11.26",
+    "typescript": "~4.5.x"
+  }
 }
